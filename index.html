@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+  دليل سريع للتعديل:
+  1) غيّر الاسم والوصف وروابط الأقسام داخل هذا الملف (index.html).
+  2) غيّر الألوان والأحجام والحركات داخل style.css.
+  3) غيّر سلوك القائمة وروابط التواصل داخل script.js.
+  ابحث عن التعليقات التي تبدأ بـ "تعديل:" لتصل للمكان المطلوب بسرعة.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- تعديل: وصف الموقع الذي يظهر في نتائج البحث ومشاركة الرابط. -->
+  <meta name="description" content="Ali — Information Systems student and aspiring Front-End Developer. Explore my projects and skills." />
+  <!-- تعديل: عنوان الصفحة الذي يظهر في تبويب المتصفح. -->
+  <title>Ali | Front-End Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- ملف التصميم: الألوان، الخطوط، المقاسات، الاستجابة للموبايل والحركات. -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- ملف JavaScript: تفاعل القائمة، ظهور العناصر، وروابط التواصل. defer يشغّله بعد قراءة HTML. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- دوائر الإضاءة الخلفية الزخرفية؛ تعديل ألوانها ومكانها من style.css. -->
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <!-- ==================== شريط التنقل العلوي ==================== -->
+  <!-- تعديل أسماء الروابط هنا، وخلي قيمة href مطابقة لـ id القسم مثل #about. -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Ali home"><span class="logo-mark">A</span><span>ali<span class="accent">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== القسم الرئيسي (Hero) ==================== -->
+    <!-- أهم جزء في أول الشاشة: الاسم، المسمى، الوصف والأزرار. -->
+    <section class="hero container" id="home">
+      <div class="hero-copy reveal">
+        <div class="availability"><span class="status-dot"></span> OPEN TO LEARNING & OPPORTUNITIES</div>
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>Ali<span class="accent">.</span><br><span class="gradient-text">Aspiring Front-End Developer</span></h1>
+        <p class="hero-description">I’m an Information Systems student learning to turn ideas into clean, responsive, and user-friendly web experiences.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>01</strong><span>Curious mindset</span></div>
+          <div><strong>02</strong><span>Learning by building</span></div>
+          <div><strong>03</strong><span>Always improving</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Decorative code card">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="profile-card">
+          <div class="card-top"><div class="window-dots"><i></i><i></i><i></i></div><span>developer.js</span><span class="card-menu">•••</span></div>
+          <div class="code-content">
+            <p><span class="code-purple">const</span> developer = {</p>
+            <p class="indent"><span class="code-blue">name</span>: <span class="code-green">'Ali'</span>,</p>
+            <p class="indent"><span class="code-blue">field</span>: <span class="code-green">'Information Systems'</span>,</p>
+            <p class="indent"><span class="code-blue">focus</span>: <span class="code-green">'Front-End Development'</span>,</p>
+            <p class="indent"><span class="code-blue">learning</span>: [</p>
+            <p class="indent2"><span class="code-green">'HTML'</span>, <span class="code-green">'CSS'</span>,</p>
+            <p class="indent2"><span class="code-green">'JavaScript'</span></p>
+            <p class="indent">],</p>
+            <p class="indent"><span class="code-blue">mindset</span>: <span class="code-green">'Keep growing'</span></p>
+            <p>};</p>
+          </div>
+          <div class="card-bottom"><span class="pulse"></span> Building something new <span class="cursor">▍</span></div>
+        </div>
+        <div class="floating-chip chip-html"><b>5</b><span>HTML</span></div>
+        <div class="floating-chip chip-css"><b>3</b><span>CSS</span></div>
+        <div class="floating-chip chip-js"><b>JS</b><span>JavaScript</span></div>
+      </div>
+    </section>
+
+    <!-- ==================== قسم نبذة عني ==================== -->
+    <!-- عدّل الفقرات والبطاقات النصية بما يعبر عنك فعلًا. -->
+    <section class="section container" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Building my path,<br><span class="gradient-text">one project at a time.</span></h2></div>
+      <div class="about-grid">
+        <div class="about-text panel reveal">
+          <p class="large-copy">I’m a student with a growing passion for <span class="accent">Front-End Development</span> and thoughtful digital experiences.</p>
+          <p>I enjoy learning how websites work, experimenting with layouts, and turning ideas into useful interfaces. My current focus is strengthening my HTML, CSS, and JavaScript fundamentals while building practical projects.</p>
+          <p>I believe the best way to improve is to stay curious, practice consistently, and keep creating.</p>
+        </div>
+        <div class="about-facts reveal">
+          <div class="fact-card"><span class="fact-icon">⌘</span><div><strong>My focus</strong><p>Front-End fundamentals</p></div></div>
+          <div class="fact-card"><span class="fact-icon">✦</span><div><strong>My approach</strong><p>Learn, build, improve</p></div></div>
+          <div class="fact-card"><span class="fact-icon">◎</span><div><strong>My goal</strong><p>Build useful web experiences</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== قسم المهارات ==================== -->
+    <!-- عدّل اسم المهارة ووصفها ونسبة الشريط داخل style="width:...%". -->
+    <section class="section container" id="skills">
+      <div class="section-heading reveal"><p class="eyebrow">WHAT I'M LEARNING</p><h2>Skills & <span class="gradient-text">tools.</span></h2><p class="section-subtitle">A growing toolkit — updated as I learn and build more.</p></div>
+      <div class="skills-grid">
+        <article class="skill-card reveal"><span class="skill-symbol html-symbol">5</span><h3>HTML5</h3><p>Structuring accessible web pages with meaningful content.</p><div class="skill-track"><span style="width:70%"></span></div><small>Learning</small></article>
+        <article class="skill-card reveal"><span class="skill-symbol css-symbol">#</span><h3>CSS3</h3><p>Creating layouts, responsive designs, and visual details.</p><div class="skill-track"><span style="width:60%"></span></div><small>Learning</small></article>
+        <article class="skill-card reveal"><span class="skill-symbol js-symbol">JS</span><h3>JavaScript</h3><p>Adding interaction and useful behavior to websites.</p><div class="skill-track"><span style="width:30%"></span></div><small>Currently learning</small></article>
+        <article class="skill-card reveal"><span class="skill-symbol ui-symbol">◈</span><h3>Responsive Design</h3><p>Making interfaces work across phones and desktops.</p><div class="skill-track"><span style="width:40%"></span></div><small>Practicing</small></article>
+      </div>
+      <p class="honesty-note"><span>✦</span> Skill indicators are illustrative. Replace them with your real current level — or remove them entirely.</p>
+    </section>
+
+    <!-- ==================== قسم المشاريع ==================== -->
+    <!-- كل article.project-card يمثل مشروعًا واحدًا؛ انسخ البطاقة لإضافة مشروع. -->
+    <section class="section container" id="projects">
+      <div class="section-heading section-heading-row reveal"><div><p class="eyebrow">SELECTED WORK</p><h2>Projects that turn<br><span class="gradient-text">practice into progress.</span></h2></div><span class="project-count">01 — 03</span></div>
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-art ecommerce-art"><div class="mock-browser"><div class="mock-bar"><i></i><i></i><i></i><span>shoply.store</span></div><div class="mock-shop"><div class="mock-side"><b>shoply.</b><span></span><span></span><span></span></div><div class="mock-products"><div class="mock-product product-one"><i></i><b>01</b></div><div class="mock-product product-two"><i></i><b>02</b></div><div class="mock-product product-three"><i></i><b>03</b></div></div></div></div><span class="art-label">CONCEPT 01</span></div>
+          <div class="project-info"><div class="project-type">WEB DEVELOPMENT <span>01</span></div><h3>E-commerce Website</h3><p>A modern online store concept with product cards, category filters, and a shopping cart.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="#contact" class="project-link" data-placeholder-link>Live preview <span>↗</span></a><a href="#contact" class="project-link" data-placeholder-link>Source code <span>↗</span></a></div></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-art expense-art"><div class="expense-window"><div class="expense-head"><span>Monthly overview</span><b>•••</b></div><div class="balance-label">TOTAL BALANCE</div><div class="balance-number">$2,480.00</div><div class="balance-change">↗ 12.8% <span>this month</span></div><div class="chart-bars"><i style="height:36%"></i><i style="height:55%"></i><i style="height:43%"></i><i style="height:75%"></i><i style="height:58%"></i><i style="height:92%"></i><i style="height:66%"></i></div><div class="chart-days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div></div><span class="art-label">CONCEPT 02</span></div>
+          <div class="project-info"><div class="project-type">WEB APPLICATION <span>02</span></div><h3>Expense Tracker</h3><p>A personal finance interface concept for tracking income, expenses, and spending patterns.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="#contact" class="project-link" data-placeholder-link>Live preview <span>↗</span></a><a href="#contact" class="project-link" data-placeholder-link>Source code <span>↗</span></a></div></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-art weather-art"><div class="weather-window"><div class="weather-location">CAIRO, EGYPT <span>⌖</span></div><div class="weather-main"><div><span class="weather-temp">28°</span><span class="weather-state">Mostly sunny</span></div><div class="sun-illustration"><i></i></div></div><div class="weather-forecast"><div><span>MON</span><b>☀</b><small>29°</small></div><div><span>TUE</span><b>☁</b><small>26°</small></div><div><span>WED</span><b>☀</b><small>30°</small></div><div><span>THU</span><b>☁</b><small>25°</small></div></div></div><span class="art-label">CONCEPT 03</span></div>
+          <div class="project-info"><div class="project-type">WEB APPLICATION <span>03</span></div><h3>Weather App</h3><p>A clean weather dashboard concept designed to display current conditions and forecasts.</p><div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="#contact" class="project-link" data-placeholder-link>Live preview <span>↗</span></a><a href="#contact" class="project-link" data-placeholder-link>Source code <span>↗</span></a></div></div>
+        </article>
+      </div>
+      <p class="projects-note">These are starter project concepts, not finished apps yet. Replace each card with your real project and working links when it’s ready.</p>
+    </section>
+
+    <!-- ==================== قسم التواصل ==================== -->
+    <!-- البريد ورابط LinkedIn موجودان هنا، وتفاصيلهما أيضًا في script.js. -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner reveal">
+        <div><p class="eyebrow">HAVE A PROJECT IN MIND?</p><h2>Let’s build something<br><span class="gradient-text">meaningful.</span></h2><p class="contact-copy">I’m open to learning, collaboration, and beginner-friendly opportunities.</p></div>
+        <div class="contact-actions"><a class="button button-primary" href="mailto:YOUR_EMAIL@example.com" id="emailLink">Email me <span>↗</span></a><a class="button button-secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer" id="linkedinLink">LinkedIn profile <span>↗</span></a><p class="contact-hint">Update the email and LinkedIn links in the code before publishing.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== نهاية الموقع / Footer ==================== -->
+  <footer class="footer container"><a class="logo" href="#home"><span class="logo-mark">A</span><span>ali<span class="accent">.</span></span></a><p>Designed & built with curiosity. <span>© <span id="year"></span> Ali</span></p><a class="back-top" href="#home">Back to top ↑</a></footer>
+</body>
+</html>
